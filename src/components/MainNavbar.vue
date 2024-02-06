@@ -22,6 +22,7 @@
           aria-current="page"
           >Home</a
         ><!--v-if-->
+        <a href="/admin" class="router-link ms-3">Admin</a>
       </div>
       <div class="user-details" ref="panel" @click="handleExpandUserDetails">
         <div class="circle-initials me-2"><span>JD</span></div>
