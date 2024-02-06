@@ -22,7 +22,9 @@
           aria-current="page"
           >Home</a
         ><!--v-if-->
-        <a href="/admin" class="router-link ms-3">Admin</a>
+        <span @click="handleAdminClick()" class="a-link a-text-black ms-3"
+          >Admin</span
+        >
       </div>
       <div class="user-details" ref="panel" @click="handleExpandUserDetails">
         <div class="circle-initials me-2"><span>JD</span></div>
@@ -62,6 +64,7 @@
 <script>
 import { onClickOutside } from "@vueuse/core";
 import { ref } from "vue";
+import router from "@/router";
 
 export default {
   name: "Navbar",
@@ -78,12 +81,17 @@ export default {
       isExpanded.value = true;
     };
 
+    const handleAdminClick = () => {
+      router.push("/admin");
+    };
+
     onClickOutside(panel, () => hidePanel());
 
     return {
       panel,
       isExpanded,
       handleExpandUserDetails,
+      handleAdminClick,
     };
   },
 };
