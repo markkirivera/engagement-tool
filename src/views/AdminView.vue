@@ -50,7 +50,7 @@
           <div class="a-bread-item text-decoration-none me-2">
             <a
               aria-current="page"
-              href="/admin"
+              @click="handleAdminHome()"
               class="router-link-active router-link-exact-active other-link"
               >Admin home</a
             >
@@ -1111,7 +1111,7 @@
             <a
               data-v-f0407f8e=""
               aria-current="page"
-              href="/admin"
+              @click="handleAdminHome()"
               class="router-link-active router-link-exact-active other-link"
               >Admin home</a
             >
@@ -1380,7 +1380,7 @@
             <a
               data-v-f0407f8e=""
               aria-current="page"
-              href="/admin"
+              @click="handleAdminHome()"
               class="router-link-active router-link-exact-active other-link"
               >Admin home</a
             >
@@ -1493,6 +1493,13 @@ export default {
     const isOther = ref(false);
 
     // functions
+    const handleAdminHome = () => {
+      isAdminHome.value = true;
+      isUserManagement.value = false;
+      isCircumstances.value = false;
+      isOther.value = false;
+    };
+
     const handleUser = () => {
       isAdminHome.value = false;
       isUserManagement.value = true;
@@ -1541,6 +1548,7 @@ export default {
       handleUser,
       handleCircumstances,
       handleOtherTools,
+      handleAdminHome,
     };
   },
 };

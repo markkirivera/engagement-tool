@@ -49,7 +49,7 @@
           </div>
           <hr />
           <div class="bottom-part ps-4 pe-4 mb-3">
-            <a href="/terms" class="a-text-grey"
+            <a href="#" class="a-text-grey"
               ><span class="small a-text-grey">Privacy policy</span
               ><span class="a-text-gray ms-2 me-2">•</span
               ><span class="small a-text-grey">Terms and conditions</span></a
